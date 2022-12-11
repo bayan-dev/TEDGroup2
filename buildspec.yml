@@ -18,12 +18,12 @@ phases:
       - echo Running tests for surefire junit
       - mvn test -f surefire/pom.xml -fn
 reports:
- group2-ted: #surefire junit reports
+ arn:aws:codebuild:ap-southeast-1:868224632833:report-group/group2-BDD-testing-group2-ted: #surefire junit reports
    files:
      - '**/*'
    base-directory: 'target/surefire-reports/'
 reports:
-  group2-ted:
+  arn:aws:codebuild:ap-southeast-1:868224632833:report-group/group2-BDD-testing-group2-ted:
     files:
       - "target/surefire-reports/*.xml"
     file-format: "JUNITXML"
