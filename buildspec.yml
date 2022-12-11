@@ -15,6 +15,11 @@ phases:
     commands:
       - echo Build completed on `date`
       - mvn package
+reports:
+  arn:aws:codebuild:ap-southeast-1:868224632833:project/group2-BDD-testing:
+    files:
+      - "target/surefire-reports/*.xml"
+    file-format: "CUCUMBERJSON"
 artifacts:
   files:
     - '**/*'
