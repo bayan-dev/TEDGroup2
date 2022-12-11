@@ -16,10 +16,15 @@ phases:
       - echo Build completed on `date`
       - mvn package
 reports:
-  arn:aws:codebuild:ap-southeast-1:868224632833:project/group2-BDD-testing:
+ group2-ted: #surefire junit reports
+   files:
+     - '**/*'
+   base-directory: 'target/surefire-reports/'
+reports:
+  group2-ted:
     files:
       - "target/surefire-reports/*.xml"
-    file-format: "CUCUMBERJSON"
+    file-format: "JUNITXML"
 artifacts:
   files:
     - '**/*'
