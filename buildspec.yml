@@ -18,4 +18,3 @@ phases:
 artifacts:
   files:
     - '**/*'
-  name: bayu-$(date +%Y-%m-%d) 
